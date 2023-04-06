@@ -70,3 +70,20 @@ $(document).ready(function () {
     },
   });
 });
+
+$("#submit-form").submit((e) => {
+  e.preventDefault();
+  $.ajax({
+    url: "https://script.google.com/macros/s/AKfycbziPYMFwR8K7sVU1ai7GagP6InqjN2jc-8-LcANYp10HxutZBAXD8yyczya4wBdHN0/exec",
+    data: $("#submit-form").serialize(),
+    method: "post",
+    success: function (response) {
+      alert("Form submitted successfully");
+      window.location.reload();
+      //window.location.href="https://google.com"
+    },
+    error: function (err) {
+      alert("Something Error");
+    },
+  });
+});
