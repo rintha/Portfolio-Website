@@ -402,6 +402,7 @@ section .title::after {
 .projects  .title::after {
   content: "what i've done";
 }
+
 .card a {
   color: white;
   text-decoration: none;
